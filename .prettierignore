@@ -31,6 +31,7 @@ chrome-profiler-events*.json
 .history/*
 
 # misc
+/.angular/cache
 /.sass-cache
 /connect.lock
 /coverage
@@ -46,6 +47,4 @@ Thumbs.db
 
 # User defined
 .archive
-package.json
-package-lock.json
 src/**/version-info.*
