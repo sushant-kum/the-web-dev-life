@@ -1,8 +1,11 @@
 {
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.renderWhitespace": "all",
   "files.trimTrailingWhitespace": true,
   "files.associations": {
-    ".versionrc": "json"
+    ".versionrc": "json",
+    ".czrc": "json"
   }
 }

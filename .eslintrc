@@ -13,7 +13,7 @@
         "plugin:@angular-eslint/template/process-inline-templates",
         "prettier"
       ],
-      "plugins": ["prettier"],
+      "plugins": ["prettier", "import", "unused-imports"],
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
@@ -31,7 +31,32 @@
             "style": "kebab-case"
           }
         ],
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "import/order": [
+          "warn",
+          {
+            "pathGroups": [
+              {
+                "pattern": "src/**",
+                "group": "external",
+                "position": "after"
+              }
+            ],
+            "pathGroupsExcludedImportTypes": ["src/**"],
+            "groups": ["builtin", "external", "parent", "sibling", "index"],
+            "newlines-between": "always",
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+            }
+          }
+        ],
+        "no-console": ["error", { "allow": ["info", "warn", "error"] }],
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+          "warn",
+          { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+        ]
       }
     },
     {
