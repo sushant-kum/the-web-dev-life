@@ -5,7 +5,8 @@
   "editor.renderWhitespace": "all",
   "files.trimTrailingWhitespace": true,
   "files.associations": {
-    ".versionrc": "json",
-    ".czrc": "json"
+    ".czrc": "json",
+    ".lintstagedrc": "json",
+    ".versionrc": "json"
   }
 }
