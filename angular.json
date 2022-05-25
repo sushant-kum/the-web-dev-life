@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-boilerplate": {
+    "the-web-dev-life": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-boilerplate",
+            "outputPath": "dist/the-web-dev-life",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-boilerplate:build:production"
+              "browserTarget": "the-web-dev-life:build:production"
             },
             "development": {
-              "browserTarget": "angular-boilerplate:build:development"
+              "browserTarget": "the-web-dev-life:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-boilerplate:build"
+            "browserTarget": "the-web-dev-life:build"
           }
         },
         "test": {
@@ -103,7 +103,7 @@
       }
     }
   },
-  "defaultProject": "angular-boilerplate",
+  "defaultProject": "the-web-dev-life",
   "cli": {
     "defaultCollection": "@angular-eslint/schematics"
   }

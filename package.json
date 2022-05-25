@@ -1,6 +1,18 @@
 {
-  "name": "angular-boilerplate",
-  "version": "1.0.0",
+  "name": "the-web-dev-life",
+  "version": "0.0.0",
+  "description": "Source code for articles and demos presented in blog and instagram page thewebdevlife",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sushant-kum/the-web-dev-life.git"
+  },
+  "author": "Sushant Kumar <sushant.kum96@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sushant-kum/the-web-dev-life/issues"
+  },
+  "homepage": "https://github.com/sushant-kum/the-web-dev-life#readme",
   "scripts": {
     "prepare": "husky install",
     "start": "npm run serve::app",
@@ -20,7 +32,6 @@
     "tool:release": "standard-version",
     "tool:version-info-gen": "node tools/version-info-gen/version-info-gen.tool.ts"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~12.2.0",
     "@angular/common": "~12.2.0",
