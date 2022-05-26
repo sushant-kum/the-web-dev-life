@@ -1,0 +1,12 @@
+@use '@angular/material' as mat;
+
+@import './dark-theme.scss';
+@import './light-theme.scss';
+
+@include mat.core();
+
+@include mat.all-component-themes($the-web-dev-life-light-theme);
+
+.dark-mode {
+  @include mat.all-component-colors($the-web-dev-life-dark-theme);
+}

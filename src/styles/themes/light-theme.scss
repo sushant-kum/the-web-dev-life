@@ -1,0 +1,22 @@
+@use '@angular/material' as mat;
+
+@import '../palette/index.scss';
+
+$the-web-dev-life-light-primary: mat.define-palette($palette-primary);
+$the-web-dev-life-light-accent: mat.define-palette($palette-accent);
+$the-web-dev-life-light-warn: mat.define-palette($palette-warn);
+
+$the-web-dev-life-light-typography: mat.define-typography-config(
+  $font-family: 'Roboto, Helvetica Neue, sans-serif',
+);
+
+$the-web-dev-life-light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $the-web-dev-life-light-primary,
+      accent: $the-web-dev-life-light-accent,
+      warn: $the-web-dev-life-light-warn,
+    ),
+    typography: $the-web-dev-life-light-typography,
+  )
+);
