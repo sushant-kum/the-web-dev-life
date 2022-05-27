@@ -1,0 +1,30 @@
+@function modify-foreground-background($theme, $foreground, $background) {
+  // Replace the foreground and background in the theme object's foreground and background palettes.
+  $modified-theme: map-merge(
+    $theme,
+    (
+      foreground: $foreground,
+      background: $background,
+    )
+  );
+
+  // Replace the foreground and background in the theme.color object's foreground and background palettes.
+  $theme-color: map-get($theme, color);
+  $modified-theme-color: map-merge(
+    $theme-color,
+    (
+      foreground: $foreground,
+      background: $background,
+    )
+  );
+
+  // Merge the changes into a new theme.
+  $modified-theme: map-merge(
+    $modified-theme,
+    (
+      color: $modified-theme-color,
+    )
+  );
+
+  @return $modified-theme;
+}

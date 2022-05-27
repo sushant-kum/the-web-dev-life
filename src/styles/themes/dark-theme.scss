@@ -1,10 +1,65 @@
 @use '@angular/material' as mat;
+@use 'theme-helper';
 
 @import '../palette/index.scss';
+
+// Dark theme text
+$light-text: $white;
+$light-primary-text: $light-text;
+$light-accent-text: rgba($light-primary-text, 0.7);
+$light-disabled-text: rgba($light-primary-text, 0.5);
+$light-dividers: rgba($light-primary-text, 0.12);
+$light-focused: rgba($light-primary-text, 0.12);
+
+// Dark theme background
+$dark-background: $black;
+$dark-bg-lighter-5: lighten($dark-background, 5%);
+$dark-bg-lighter-10: lighten($dark-background, 10%);
+$dark-bg-lighter-20: lighten($dark-background, 20%);
+$dark-bg-lighter-30: lighten($dark-background, 30%);
+$light-bg-alpha-4: rgba($white, 0.04);
+$light-bg-alpha-12: rgba($white, 0.12);
 
 $the-web-dev-life-dark-primary: mat.define-palette($palette-primary);
 $the-web-dev-life-dark-accent: mat.define-palette($palette-accent);
 $the-web-dev-life-dark-warn: mat.define-palette($palette-warn);
+
+$the-web-dev-life-dark-theme-foreground: (
+  base: $light-text,
+  divider: $light-dividers,
+  dividers: $light-dividers,
+  disabled: $light-disabled-text,
+  disabled-button: rgba($light-text, 0.3),
+  disabled-text: $light-disabled-text,
+  elevation: $black,
+  hint-text: $light-disabled-text,
+  secondary-text: $light-accent-text,
+  accent-text: $light-accent-text,
+  icon: $light-text,
+  icons: $light-text,
+  text: $light-text,
+  slider-min: $light-text,
+  slider-off: rgba($light-text, 0.3),
+  slider-off-active: rgba($light-text, 0.3),
+);
+
+$the-web-dev-life-dark-theme-background: (
+  background: $dark-background,
+  status-bar: $dark-bg-lighter-20,
+  app-bar: $dark-bg-lighter-5,
+  hover: $light-bg-alpha-4,
+  card: $dark-bg-lighter-5,
+  dialog: $dark-bg-lighter-5,
+  tooltip: $dark-bg-lighter-20,
+  disabled-button: $light-bg-alpha-12,
+  raised-button: $dark-bg-lighter-5,
+  focused-button: $light-focused,
+  selected-button: $dark-bg-lighter-20,
+  selected-disabled-button: $dark-bg-lighter-30,
+  disabled-button-toggle: $dark-bg-lighter-10,
+  unselected-chip: $dark-bg-lighter-20,
+  disabled-list-option: $dark-bg-lighter-10,
+);
 
 $the-web-dev-life-dark-typography: mat.define-typography-config(
   $font-family: 'Roboto, Helvetica Neue, sans-serif',
@@ -19,4 +74,10 @@ $the-web-dev-life-dark-theme: mat.define-dark-theme(
     ),
     typography: $the-web-dev-life-dark-typography,
   )
+);
+
+$the-web-dev-life-dark-theme: theme-helper.modify-foreground-background(
+  $the-web-dev-life-dark-theme,
+  $the-web-dev-life-dark-theme-foreground,
+  $the-web-dev-life-dark-theme-background
 );
