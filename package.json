@@ -20,7 +20,7 @@
     "build": "npm run build:prod::app",
     "test": "ng test",
     "preserve::app": "npm run tool:version-info-gen -- --dev",
-    "serve::app": "ng serve --port 5020",
+    "serve::app": "ng serve --port 5030",
     "prebuild:prod::app": "npm run tool:version-info-gen",
     "build:prod::app": "ng build",
     "lint": "ng lint",
